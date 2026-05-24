@@ -9,97 +9,72 @@ const boardMembers = [
     role: "Co-President",
     major: "Finance",
     year: "Senior",
-    ig: "faiz_1606_",
+    image: "/board/faiz-shaikh.jpg",
   },
   {
     name: "Ibraheem Khan",
     role: "Co-President",
     major: "Finance + Accounting",
     year: "Sophomore",
-    ig: "ibraheemkhan28",
+    image: "/board/ibraheem-khan.jpg",
   },
   {
     name: "Ranya Belabbes",
     role: "VP Internal",
     major: "Business + Data Science",
     year: "Sophomore",
-    ig: "ranyabelabbes",
+    image: "/board/ranya-belabbes.jpg",
   },
   {
     name: "Dean Xoubi",
     role: "VP External",
     major: "Accountancy + Data Science",
     year: "Sophomore",
-    ig: "zoobs00",
+    image: "/board/dean-xoubi.jpg",
   },
   {
     name: "Roqaya Elmenshawy",
     role: "VP Professional Development",
     major: "IS + Data Science",
     year: "Sophomore",
-    ig: "roqaya.elmenshawy",
+    image: "/board/roqaya-elmenshawy.jpg",
   },
   {
     name: "Nashra Younus",
     role: "Education Chair",
     major: "Accountancy + Data Science",
     year: "Sophomore",
-    ig: "nashray21",
+    image: "/board/nashra-younus.jpg",
   },
   {
     name: "Saliha Ansari",
     role: "VP Marketing",
     major: "Accountancy + Data Science",
     year: "Sophomore",
-    ig: "saliha_ansarii",
+    image: "/board/saliha-ansari.jpg",
   },
   {
     name: "Syed Hasan",
     role: "Marketing Chair",
     major: "Finance + Accountancy",
     year: "Freshman",
-    ig: "_shasan07",
+    image: "/board/syed-hasan.png",
   },
   {
     name: "Yazan Rahmah",
     role: "VP Finance",
     major: "Finance + Accountancy",
     year: "Freshman",
-    ig: "yazanrahmah",
+    image: "/board/yazan-rahmah.jpg",
   },
   {
     name: "Zaara Ijaz",
     role: "Social Chair",
     major: "IS + Data Science",
     year: "Freshman",
-    ig: "zaara.ijaz",
+    image: "/board/zaara-ijaz.jpg",
   },
 ];
-
-function AvatarPlaceholder({ name }: { name: string }) {
-  const initials = name
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
-
-  const colors = [
-    "bg-[#e8f0fe] text-[#1967d2]",
-    "bg-[#fce8e6] text-[#c5221f]",
-    "bg-[#e6f4ea] text-[#137333]",
-    "bg-[#fef7e0] text-[#b06000]",
-    "bg-[#f3e8fd] text-[#7627bb]",
-    "bg-[#e8eaed] text-[#5f6368]",
-  ];
-  const colorIdx = name.length % colors.length;
-
-  return (
-    <div
-      className={`w-24 h-24 rounded-full flex items-center justify-center text-2xl font-medium shrink-0 mb-4 ${colors[colorIdx]}`}
-    >
-      {initials}
-    </div>
-  );
-}
 
 export default function Board() {
   return (
@@ -125,8 +100,12 @@ export default function Board() {
                 whileHover={{ borderColor: "rgba(255,255,255,0.15)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="flex justify-center">
-                  <AvatarPlaceholder name={member.name} />
+                <div className="flex justify-center mb-4">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full object-cover"
+                  />
                 </div>
                 <h4 className="text-white text-lg font-medium mb-1">
                   {member.name}
