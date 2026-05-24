@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[72px]">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 shrink-0">
-          <img src="/logo.png" alt="MBSA" className="h-9 w-auto" />
+          <img src="/logo-nav.png" alt="MBSA" className="h-10 w-auto" />
           <span className="text-[#d5dbe6] text-sm font-normal hidden sm:inline">
             @ UIUC
           </span>

@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Social / Brand */}
           <div>
-            <img src="/logo.png" alt="MBSA" className="h-8 w-auto mb-4" />
+            <img src="/logo-nav.png" alt="MBSA" className="h-10 w-auto mb-4" />
             <ul className="space-y-3">
               <li>
                 <a
