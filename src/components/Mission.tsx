@@ -5,62 +5,19 @@ import ScrollReveal from "./ScrollReveal";
 
 const pillars = [
   {
+    title: "Professional",
+    description:
+      "We provide career-focused resources, skill development, and access to opportunities that prepare members for success in business and related fields.",
+  },
+  {
     title: "Community",
     description:
-      "We foster an uplifting and inclusive network for Muslim students at UIUC.",
-    icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="text-[#d5dbe6]"
-      >
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87" />
-        <path d="M16 3.13a4 4 0 010 7.75" />
-      </svg>
-    ),
+      "We create an engaging community where members build genuine relationships, bond through shared experiences, and support one another beyond academics and careers.",
   },
   {
-    title: "Opportunity",
+    title: "Faith",
     description:
-      "We connect members with real-world professional experiences and mentorship.",
-    icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="text-[#d5dbe6]"
-      >
-        <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
-        <line x1="7" y1="7" x2="7.01" y2="7" />
-      </svg>
-    ),
-  },
-  {
-    title: "Impact",
-    description:
-      "Our programs prepare students to lead with purpose and make a difference.",
-    icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="text-[#d5dbe6]"
-      >
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-      </svg>
-    ),
+      "We ground our organization in Islamic values, emphasizing ethical leadership, integrity, and staying true to one's identity while pursuing professional success.",
   },
 ];
 
@@ -75,22 +32,31 @@ export default function Mission() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="text-[36px] sm:text-[44px] leading-[1.1em] font-medium text-white mb-16">
+          <h2 className="text-[36px] sm:text-[44px] leading-[1.1em] font-medium text-white mb-6">
             Building the Next Generation of Muslim Leaders
           </h2>
         </ScrollReveal>
 
+        <ScrollReveal delay={0.15}>
+          <p className="text-[#d5dbe6] text-base sm:text-lg leading-[1.7em] max-w-3xl mb-16">
+            We are a professional organization built on a foundation of Islamic
+            principles. We provide Muslim students with professional
+            development, resources, and access while fostering a strong sense of
+            community. MBSA aims to develop purpose-driven leaders, increase
+            representation in business, and create a welcoming space where
+            students can grow professionally and remain true to their faith and
+            values.
+          </p>
+        </ScrollReveal>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pillars.map((pillar, i) => (
-            <ScrollReveal key={pillar.title} delay={0.15 + i * 0.1}>
+            <ScrollReveal key={pillar.title} delay={0.2 + i * 0.1}>
               <motion.div
                 className="rounded-[10px] border border-[rgba(255,255,255,0.07)] p-8 h-full"
                 whileHover={{ borderColor: "rgba(255,255,255,0.15)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-5">
-                  {pillar.icon}
-                </div>
                 <h4 className="text-white text-xl font-medium mb-3">
                   {pillar.title}
                 </h4>

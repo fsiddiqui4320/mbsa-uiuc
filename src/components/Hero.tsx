@@ -14,13 +14,12 @@ export default function Hero() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <p className="text-[#d5dbe6] text-base sm:text-lg leading-[1.6em] max-w-2xl mx-auto mb-10">
-            A space where Muslim students grow together through community,
-            opportunity, and impact.
+          <p className="text-[#d5dbe6] text-base sm:text-lg leading-[1.6em] max-w-2xl mx-auto">
+            Guided by faith, built for impact. A professional organization
+            where Muslim students develop careers, build community, and lead
+            with purpose.
           </p>
         </ScrollReveal>
-
-
       </div>
 
       {/* Subtle bottom fade */}
