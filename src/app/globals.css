@@ -22,10 +22,9 @@ html {
 body {
   background: #001429;
   color: #ffffff;
-  font-family: "Satoshi", "Inter", sans-serif;
+  font-family: "Satoshi", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "cv01" 1, "cv09" 1, "cv11" 1, "cv05" 1;
 }
 
 /* Section backgrounds */
