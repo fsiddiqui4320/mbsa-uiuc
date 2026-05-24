@@ -5,16 +5,16 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Programs() {
   return (
-    <section id="programs" className="py-24 lg:py-32 px-6 lg:px-12">
+    <section id="programs" className="section-light py-24 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1200px] mx-auto">
         <ScrollReveal>
-          <h3 className="font-serif italic text-[22px] leading-[1em] text-[#d5dbe6] mb-4">
+          <h3 className="font-serif italic text-[22px] leading-[1em] text-secondary-light mb-4">
             Programs
           </h3>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="text-[36px] sm:text-[44px] leading-[1.1em] font-medium text-white mb-12">
+          <h2 className="text-[36px] sm:text-[44px] leading-[1.1em] font-medium text-[#001429] mb-12">
             What We Offer
           </h2>
         </ScrollReveal>
@@ -22,8 +22,8 @@ export default function Programs() {
         {/* Mosaic Program Card */}
         <ScrollReveal delay={0.2}>
           <motion.div
-            className="rounded-[10px] border border-[rgba(255,255,255,0.07)] bg-[#00132A] p-8 lg:p-12 max-w-3xl"
-            whileHover={{ borderColor: "rgba(255,255,255,0.15)" }}
+            className="rounded-[10px] border border-[#e2e8f0] bg-[#f8fafc] p-8 lg:p-12 max-w-3xl"
+            whileHover={{ borderColor: "#cbd5e1" }}
             transition={{ duration: 0.3 }}
           >
             <div className="flex items-start gap-5 flex-col sm:flex-row">
@@ -45,10 +45,10 @@ export default function Programs() {
               </div>
 
               <div>
-                <h4 className="text-white text-xl sm:text-2xl font-medium mb-3">
+                <h4 className="text-[#001429] text-xl sm:text-2xl font-medium mb-3">
                   Mosaic
                 </h4>
-                <p className="text-[#d5dbe6] text-base leading-[1.6em] mb-6 max-w-xl">
+                <p className="text-[#4a5568] text-base leading-[1.6em] mb-6 max-w-xl">
                   Mosaic is MBSA&apos;s consulting program designed to give
                   students real-world experience, mentorship, and practical
                   skills. Students work on real projects with real clients,
@@ -57,7 +57,7 @@ export default function Programs() {
                 </p>
                 <motion.a
                   href="#"
-                  className="inline-flex items-center gap-2 text-white font-bold text-[15px] tracking-[-0.01em] hover:opacity-80 transition-opacity"
+                  className="inline-flex items-center gap-2 text-[#001429] font-bold text-[15px] tracking-[-0.01em] hover:opacity-70 transition-opacity"
                   whileHover={{ x: 4 }}
                 >
                   Learn More
@@ -66,7 +66,7 @@ export default function Programs() {
                     height="16"
                     viewBox="0 0 16 16"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#001429"
                     strokeWidth="2"
                   >
                     <path d="M3 8h10M9 4l4 4-4 4" />

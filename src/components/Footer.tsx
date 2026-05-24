@@ -58,14 +58,6 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
-                  className="text-[#d5dbe6] text-sm hover:text-white transition-colors"
-                >
-                  Join MBSA
-                </a>
-              </li>
-              <li>
-                <a
                   href="#board"
                   className="text-[#d5dbe6] text-sm hover:text-white transition-colors"
                 >

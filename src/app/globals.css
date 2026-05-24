@@ -27,6 +27,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Section backgrounds */
+.section-dark {
+  background: #001429;
+}
+
+.section-light {
+  background: #ffffff;
+}
+
+.section-light h3,
+.section-light h4 {
+  color: #001429;
+}
+
+.section-light .gradient-text-dark {
+  background: linear-gradient(161deg, #001429 52%, #1a3a5c 166%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-light .text-secondary-light {
+  color: #4a5568;
+}
+
 /* Gradient text utility */
 .gradient-text {
   background: linear-gradient(161deg, #ffffff 52%, #04070d 166%);
@@ -59,4 +84,32 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.25);
+}
+
+/* Logo carousel mask edges */
+.carousel-mask-left {
+  mask-image: linear-gradient(to right, transparent 0%, black 20%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%);
+}
+
+.carousel-mask-right {
+  mask-image: linear-gradient(to left, transparent 0%, black 20%);
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 20%);
+}
+
+.carousel-mask-both {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }

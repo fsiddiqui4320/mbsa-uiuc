@@ -50,12 +50,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#cta"
-            className="inline-flex items-center justify-center bg-white text-[#001429] font-bold text-[15px] tracking-[-0.01em] px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
-          >
-            Join MBSA
-          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -99,13 +93,7 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#cta"
-                onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center justify-center bg-white text-[#001429] font-bold text-[15px] px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity w-fit"
-              >
-                Join MBSA
-              </a>
+
             </div>
           </motion.div>
         )}

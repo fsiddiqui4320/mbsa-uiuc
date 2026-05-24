@@ -65,10 +65,10 @@ function AnimatedCounter({
 
 export default function Stats() {
   return (
-    <section className="py-24 lg:py-32 px-6 lg:px-12">
+    <section className="section-light py-24 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1200px] mx-auto">
         <ScrollReveal>
-          <h3 className="font-serif italic text-[22px] leading-[1em] text-[#d5dbe6] mb-4 text-center">
+          <h3 className="font-serif italic text-[22px] leading-[1em] text-secondary-light mb-4 text-center">
             By the Numbers
           </h3>
         </ScrollReveal>
@@ -77,10 +77,10 @@ export default function Stats() {
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 0.15}>
               <motion.div className="text-center p-8 rounded-[10px]">
-                <div className="text-[56px] sm:text-[64px] font-medium text-white leading-[1.1em] mb-3">
+                <div className="text-[56px] sm:text-[64px] font-medium text-[#001429] leading-[1.1em] mb-3">
                   <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="font-serif italic text-[18px] text-[#d5dbe6]">
+                <p className="font-serif italic text-[18px] text-[#4a5568]">
                   {stat.label}
                 </p>
               </motion.div>

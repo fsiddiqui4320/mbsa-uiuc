@@ -24,7 +24,7 @@ function AvatarPlaceholder({ name }: { name: string }) {
 
 export default function Board() {
   return (
-    <section id="board" className="py-24 lg:py-32 px-6 lg:px-12">
+    <section id="board" className="section-dark py-24 lg:py-32 px-6 lg:px-12">
       <div className="max-w-[1200px] mx-auto">
         <ScrollReveal>
           <h3 className="font-serif italic text-[22px] leading-[1em] text-[#d5dbe6] mb-4 text-center">
