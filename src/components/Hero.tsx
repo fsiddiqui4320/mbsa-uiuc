@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="section-dark relative min-h-screen flex items-center justify-center px-6 lg:px-12 pt-[72px]">
       <div className="max-w-[1200px] w-full mx-auto text-center">
         <ScrollReveal>
-          <h1 className="text-[40px] leading-[1.1em] sm:text-[50px] md:text-[56px] font-medium gradient-text mb-6 max-w-4xl mx-auto">
+          <h1 className="text-[44px] leading-[1.1em] sm:text-[54px] md:text-[64px] font-medium gradient-text mb-6 max-w-4xl mx-auto">
             The Future of Muslim Leaders @ Illinois
           </h1>
         </ScrollReveal>
