@@ -78,10 +78,15 @@ const boardMembers = [
 
 export default function Board() {
   return (
-    <section id="board" className="section-dark py-24 lg:py-32 px-6 lg:px-12">
+    <section id="board" className="py-24 lg:py-32 px-6 lg:px-12">
+      {/* Divider */}
+      <div className="max-w-[1200px] mx-auto mb-24">
+        <hr className="section-divider" />
+      </div>
+
       <div className="max-w-[1200px] mx-auto">
         <ScrollReveal>
-          <h3 className="font-serif italic text-[22px] leading-[1em] text-[#d5dbe6] mb-4 text-center">
+          <h3 className="section-label text-[#d5dbe6] mb-4 text-center">
             Our Board
           </h3>
         </ScrollReveal>
@@ -92,11 +97,11 @@ export default function Board() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {boardMembers.map((member, i) => (
-            <ScrollReveal key={member.name} delay={0.1 + i * 0.05}>
+            <ScrollReveal key={member.name} delay={0.1 + i * 0.04}>
               <motion.div
-                className="rounded-[10px] border border-[rgba(255,255,255,0.07)] p-8 text-center"
+                className="rounded-[10px] border border-[rgba(255,255,255,0.07)] p-6 text-center h-full"
                 whileHover={{ borderColor: "rgba(255,255,255,0.15)" }}
                 transition={{ duration: 0.3 }}
               >
@@ -104,16 +109,16 @@ export default function Board() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover"
+                    className="w-20 h-20 rounded-full object-cover"
                   />
                 </div>
-                <h4 className="text-white text-lg font-medium mb-1">
+                <h4 className="text-white text-[15px] font-bold leading-[1.3em] mb-1">
                   {member.name}
                 </h4>
-                <p className="text-[#d5dbe6] text-sm font-medium mb-0.5">
+                <p className="text-[#d5dbe6] text-[13px] leading-[1.4em] mb-0.5">
                   {member.role}
                 </p>
-                <p className="text-[#d5dbe6] text-xs opacity-60">
+                <p className="text-[#d5dbe6] text-[12px] leading-[1.4em] opacity-60">
                   {member.major}, {member.year}
                 </p>
               </motion.div>

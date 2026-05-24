@@ -5,39 +5,22 @@ import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
 const stats = [
-  { label: "Members", value: 0, suffix: "+" },
-  { label: "Programs", value: 1, suffix: "" },
-  { label: "Events", value: 0, suffix: "+" },
+  { label: "Members", value: 0 },
+  { label: "Programs", value: 1 },
+  { label: "Events", value: 0 },
 ];
 
-function AnimatedCounter({
+function AnimatedStat({
   target,
-  suffix,
+  inView,
 }: {
   target: number;
-  suffix: string;
+  inView: boolean;
 }) {
   const [count, setCount] = useState(0);
-  const [hasStarted, setHasStarted] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasStarted) {
-          setHasStarted(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [hasStarted]);
-
-  useEffect(() => {
-    if (!hasStarted) return;
-
+    if (!inView) return;
     const duration = 2000;
     const steps = 60;
     const increment = target / steps;
@@ -51,36 +34,53 @@ function AnimatedCounter({
         setCount(Math.floor(current));
       }
     }, duration / steps);
-
     return () => clearInterval(timer);
-  }, [hasStarted, target]);
+  }, [inView, target]);
 
   return (
-    <span ref={ref} className="tabular-nums">
-      {count}
-      {suffix}
+    <span className="tabular-nums">
+      {count}+
     </span>
   );
 }
 
 export default function Stats() {
-  return (
-    <section className="section-light py-24 lg:py-32 px-6 lg:px-12">
-      <div className="max-w-[1200px] mx-auto">
-        <ScrollReveal>
-          <h3 className="font-serif italic text-[22px] leading-[1em] text-secondary-light mb-4 text-center">
-            By the Numbers
-          </h3>
-        </ScrollReveal>
+  const [inView, setInView] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true);
+      },
+      { threshold: 0.3 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section className="py-24 lg:py-32 px-6 lg:px-12" ref={ref}>
+      <div className="max-w-[1200px] mx-auto">
+        {/* Divider */}
+        <div className="mb-24">
+          <hr className="section-divider" />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 0.15}>
-              <motion.div className="text-center p-8 rounded-[10px]">
-                <div className="text-[56px] sm:text-[64px] font-medium text-[#001429] leading-[1.1em] mb-3">
-                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+              <motion.div className="text-center">
+                {/* Number — scaled 4.5x to match UMich reference */}
+                <div className="text-[16px] leading-[1em] font-normal text-white mb-0"
+                  style={{ transform: "scale(4.5)", transformOrigin: "center center" }}
+                >
+                  <AnimatedStat target={stat.value} inView={inView} />
                 </div>
-                <p className="font-serif italic text-[18px] text-[#4a5568]">
+                {/* Spacer for the scaled element */}
+                <div className="h-[72px]" />
+                {/* Label — Instrument Serif italic */}
+                <p className="stats-label text-white">
                   {stat.label}
                 </p>
               </motion.div>

@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Programs", href: "#programs" },
   { label: "Mission", href: "#mission" },
   { label: "Board", href: "#board" },
-  { label: "Contact", href: "#footer" },
 ];
 
 export default function Navbar() {
@@ -30,24 +29,31 @@ export default function Navbar() {
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[72px]">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 shrink-0">
-          <img src="/logo-nav.png" alt="MBSA" className="h-10 w-auto" />
-          <span className="text-[#d5dbe6] text-sm font-normal hidden sm:inline">
-            @ UIUC
-          </span>
+        <a href="#" className="flex items-center shrink-0">
+          <img
+            src="/logo-nav.png"
+            alt="MBSA @ UIUC"
+            className="h-9 w-auto"
+          />
         </a>
 
-        {/* Desktop nav */}
+        {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[#d5dbe6] hover:text-white text-[15px] font-medium tracking-[-0.01em] transition-colors duration-200"
-            >
+            <a key={link.href} href={link.href} className="nav-link">
               {link.label}
             </a>
           ))}
+        </div>
+
+        {/* Desktop CTA */}
+        <div className="hidden md:block">
+          <a
+            href="#cta"
+            className="btn-primary"
+          >
+            Join MBSA
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -86,12 +92,18 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-[#d5dbe6] hover:text-white text-[15px] font-medium transition-colors"
+                  className="nav-link"
                 >
                   {link.label}
                 </a>
               ))}
-
+              <a
+                href="#cta"
+                onClick={() => setMobileOpen(false)}
+                className="btn-primary w-fit"
+              >
+                Join MBSA
+              </a>
             </div>
           </motion.div>
         )}
