@@ -1,0 +1,89 @@
+{
+  "reference": "https://www.mbsaumich.org (MBSA @ UMich Ross)",
+  "framework": "Framer (reference built on Framer)",
+  "layout": {
+    "structure": "Nav → Hero → Programs → Mission → Stats → Partners → CTA → Footer",
+    "maxWidth": "1200px",
+    "alignment": "center",
+    "spacingStrategy": "generous whitespace, 80-120px section gaps, consistent padding"
+  },
+  "background": {
+    "treatment": "solid dark navy throughout",
+    "color": "#001429 (rgb(0, 20, 41))",
+    "variant": "#00132A (rgb(0, 19, 42))",
+    "behaviors": "static dark background, no gradient on main bg"
+  },
+  "colors": {
+    "light": {
+      "surface": "#ffffff",
+      "text": "#000000",
+      "accent": "#0066ff"
+    },
+    "dark": {
+      "surface": "#001429",
+      "surfaceAlt": "#00132A",
+      "text": "#ffffff",
+      "textSecondary": "#d5dbe6",
+      "textGradient": "linear-gradient(161deg, #ffffff 52%, #04070d 166%)",
+      "accent": "rgb(213, 219, 230)",
+      "border": "rgba(255, 255, 255, 0.07)"
+    }
+  },
+  "typography": {
+    "primaryStack": "'Satoshi', sans-serif",
+    "accentStack": "'Instrument Serif', serif",
+    "fallbackStack": "'Inter', sans-serif",
+    "scale": {
+      "h1": "50px/500/1.1em — Satoshi medium, gradient fill",
+      "h2": "44px/500/1.1em — Satoshi medium",
+      "h3": "22px/italic/1em — Instrument Serif italic",
+      "body": "16px/400/1.5em — Satoshi regular",
+      "caption": "14px/400/1.3em — Satoshi regular",
+      "button": "15px/700/1em — Satoshi bold, tracking -0.01em"
+    },
+    "treatments": "Gradient text fill on hero headings, Instrument Serif italic for accent labels (Partners, Alumni, Members), Satoshi bold for button/nav labels"
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "#ffffff",
+        "textColor": "#001429",
+        "padding": "12px 24px",
+        "radius": "6px",
+        "font": "Satoshi bold, 15px, tracking -0.2px",
+        "hover": "slight scale or opacity transition"
+      }
+    },
+    "cards": {
+      "background": "transparent or subtle rgba",
+      "border": "rgba(255,255,255,0.07)",
+      "radius": "10px"
+    },
+    "nav": {
+      "background": "transparent on dark bg",
+      "links": "Satoshi, white, small caps feel"
+    },
+    "stats": {
+      "layout": "3-column grid",
+      "numberStyle": "large Satoshi numbers, scaled up 4.5x",
+      "labelStyle": "Instrument Serif italic below"
+    },
+    "footer": {
+      "background": "#001429",
+      "columns": "Programs | Resources | Community",
+      "socialIcons": "inline SVG, white fill on dark bg circles"
+    }
+  },
+  "distinctive": [
+    "Auto-scrolling partner logo carousel with fade masks on edges",
+    "Large stat numbers with animated counters (0+)",
+    "Instrument Serif italic used sparingly for category labels",
+    "Gradient text fills on hero/CTA headings",
+    "Section divider using thin SVG line with low opacity",
+    "Satoshi font with custom OpenType features (cv01, cv09, cv11, cv05 on)"
+  ],
+  "vibe": {
+    "keywords": ["professional", "prestigious", "clean", "dark", "polished", "corporate"],
+    "antiKeywords": ["playful", "colorful", "casual", "light-mode", "busy"]
+  }
+}
