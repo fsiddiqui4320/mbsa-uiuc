@@ -46,15 +46,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
-          <a
-            href="#cta"
-            className="btn-primary"
-          >
-            Join MBSA
-          </a>
-        </div>
+
 
         {/* Mobile toggle */}
         <button
