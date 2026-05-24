@@ -16,13 +16,13 @@ export default function Hero() {
 
       <div className="max-w-[1200px] w-full mx-auto text-center relative z-10">
         <ScrollReveal>
-          <h1 className="text-[42px] leading-[1.1em] sm:text-[50px] font-medium gradient-text mb-6 max-w-4xl mx-auto">
+          <h1 className="text-[42px] leading-[1.05em] sm:text-[55px] font-medium gradient-text mb-6 max-w-4xl mx-auto" style={{ letterSpacing: "-2.6px" }}>
             The Future of Muslim Leaders @ Illinois
           </h1>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <p className="text-[#d5dbe6] text-[16px] leading-[1.5em] max-w-xl mx-auto mb-10">
+          <p className="text-[#d5dbe6] text-[23px] leading-[1.5em] max-w-xl mx-auto mb-10" style={{ letterSpacing: "-2px" }}>
             A space where Muslim students grow together through community,
             opportunity, and impact.
           </p>
