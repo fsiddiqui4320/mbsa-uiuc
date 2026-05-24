@@ -21,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <head />
+      <head>
+        <link rel="icon" href="/logo-sm.png" />
+      </head>
       <body className="min-h-full flex flex-col bg-[#001429] text-white">
         {children}
       </body>

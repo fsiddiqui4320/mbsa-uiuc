@@ -77,9 +77,7 @@ export default function Footer() {
 
           {/* Social / Brand */}
           <div>
-            <h4 className="text-white font-bold text-[15px] tracking-[-0.01em] mb-4">
-              MBSA @ UIUC
-            </h4>
+            <img src="/logo.png" alt="MBSA" className="h-8 w-auto mb-4" />
             <ul className="space-y-3">
               <li>
                 <a
